@@ -1,0 +1,21 @@
+<div class="card nr-card">
+  <div class="card-body">
+    <a href={{article.url}}>
+      <h3 class="card-title">
+        {{article.title}}
+      </h3>
+    </a>
+    <h4 class="card-subtitle mb-2 text-muted">
+      {{article.source}}
+      {{#if article.author}}
+       - {{article.author}}
+      {{/if}}
+    </h4>
+    <p class="card-text">
+      {{yield}}
+    </p>
+    <small class="text-muted">
+      {{article.published}}
+    </small>
+  </div>
+</div>

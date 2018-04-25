@@ -1,0 +1,18 @@
+{{#if articles}}
+  {{#each articles as |article|}}
+    {{#article-card article=article}}
+      {{article.description}}
+    {{/article-card}}
+  {{/each}}
+{{else}}
+    <p>Nothing to see here</p>
+{{/if}}
+{{#if prev}}
+  {{#link-to "home" (query-params page=prev)}}
+    Previous
+  {{/link-to}}
+{{/if}}
+{{#link-to "home" (query-params page=next)}}
+  Next
+{{/link-to}}
+{{yield}}
