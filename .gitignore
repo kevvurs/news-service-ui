@@ -1,4 +1,4 @@
-environment.js
+config/environment.js
 
 # compiled output
 /dist
