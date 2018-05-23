@@ -15,6 +15,11 @@ export default Route.extend({
       };
     });
   },
+
+  beforeModel: function() {
+    return this.get('session').fetch().catch(function() {});
+  },
+
   setupController(controller, { articles, meta }) {
     this._super(controller, articles);
     controller.set('meta', meta);
